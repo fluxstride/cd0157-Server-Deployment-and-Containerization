@@ -49,8 +49,8 @@ phases:
       - echo $EKS_CLUSTER_NAME
       - echo $EKS_KUBECTL_ROLE_ARN
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn $EKS_KUBECTL_ROLE_ARN
-      - export AWS_ACCESS_KEY_ID=AKIAZGQ4SC3J4I7ULZ7U
-      - export AWS_SECRET_ACCESS_KEY=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
+      - export AWS_ACCESS_KEY_ID=AKIAZGQ4SC3J5F4VB62A
+      - export AWS_SECRET_ACCESS_KEY=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
       - kubectl apply -f simple_jwt_api.yml
       - printf '[{"name":"simple_jwt_api","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
