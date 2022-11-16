@@ -51,6 +51,7 @@ phases:
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn $EKS_KUBECTL_ROLE_ARN
       - curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
       - install minikube-linux-amd64 /usr/local/bin/minikube
+      - sudo apt install conntrack
       - minikube start --driver=none
       - export AWS_ACCESS_KEY_ID=AKIAZGQ4SC3J4I7ULZ7U
       - export AWS_SECRET_ACCESS_KEY=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
